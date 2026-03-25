@@ -31,4 +31,4 @@ pip install -r requirements.txt
 ```
 
 ## Author
-Built by [TERA NAAM] while learning Python 🐍
+Built by [Rajdeep Singh] while learning Python 🐍

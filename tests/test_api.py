@@ -1,25 +1,15 @@
-import requests
+def test_status_code(sample_post):
+    assert sample_post.status_code == 200
 
-BASE_URL = "https://jsonplaceholder.typicode.com"
-
-def test_get_post_status_code():
-    """API 200 return kare"""
-    response = requests.get(f"{BASE_URL}/posts/1")
-    assert response.status_code == 200
-
-def test_get_post_has_title():
-    """Response mein title field ho"""
-    response = requests.get(f"{BASE_URL}/posts/1")
-    data = response.json()
+def test_has_title(sample_post):
+    data = sample_post.json()
     assert "title" in data
 
-def test_get_post_has_correct_id():
-    """ID 1 honi chahiye"""
-    response = requests.get(f"{BASE_URL}/posts/1")
-    data = response.json()
+def test_has_correct_id(sample_post):
+    data = sample_post.json()
     assert data["id"] == 1
 
-def test_invalid_post_returns_404():
-    """Fake ID pe 404 aana chahiye"""
-    response = requests.get(f"{BASE_URL}/posts/99999")
+def test_invalid_post_returns_404(base_url):
+    import requests
+    response = requests.get(f"{base_url}/posts/99999")
     assert response.status_code == 404

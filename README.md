@@ -12,15 +12,16 @@
 - Allure (test reporting)
 - Claude API (Anthropic) — planned
 - n8n (orchestration) — planned
-- GitHub Actions (CI) — planned
+- GitHub Actions (CI)
 
 ## Project Status
-Phase 2 complete — automated API tests for JSONPlaceholder and ReqRes
+Phase 2 complete — automated API tests for JSONPlaceholder and ReqRes, with CI on push/PR
 
 ## Roadmap
 - [x] Project setup
 - [x] Phase 1: Manual API testing with requests
 - [x] Phase 2: Automated tests with pytest
+- [x] GitHub Actions CI pipeline
 - [ ] Phase 3: AI test case generation (Claude API)
 - [ ] Phase 4: n8n + GitHub automation pipeline
 
